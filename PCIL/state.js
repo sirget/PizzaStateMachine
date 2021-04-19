@@ -191,8 +191,8 @@ let machine = {
         }
 
     },
-    getNext : function (taget) {
-        let next = this.StateMetrix[this.current_State.name][taget]
+    getNext : function (target) {
+        let next = this.StateMetrix[this.current_State.name][target]
         return {name : next , key : this.StateMetrix[next].key}
     },
     setCurrentState : function (next) {
