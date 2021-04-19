@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Meaw Meaw Cat Food</title>
+  <title>Pizza Computer</title>
   <meta name="description" content="This is Meaw Meaw Cat Food Web Application" />
   <link rel="stylesheet" href="styles.css" />
 
@@ -29,7 +29,7 @@
       <div id="header-background" class="basic-kitty-mode">
         <script src="kitty.js"></script>
       </div>
-      <h1 class="logo">Meaw Meaw Cat Food</h1>
+      <h1 class="logo">Pizza Computer</h1>
       <div class="member-button" id="memberButton">
         <span class="material-icons-round noselect" style="font-size:100px;color:#0da789;cursor: pointer;">
           groups
@@ -51,61 +51,98 @@
 
       <div class="container4">
         <div class="selector">
-          <p class="Header">Choose a Cat Food</p>
+          <p class="Header">เลือกพิซซ่าที่คุณต้องการ</p>
 
-          <p class="t">1: Main Food</p>
+          <p class="t">เลือกไซส์ที่ต้องการ</p>
           <div class="foods">
 
             <div class="food">
-              <input id="btn-1" type="radio" name="main-course" class="Button-pic" onclick="handleClick('อาหารเม็ด')">
+              <input id="btn-1" type="radio" name="main-course" class="Button-pic" onclick="handleClick('sizeM')">
               <label for="btn-1">
-                <img class="food-img" src="./src/img/อาหารเม็ด.png" alt="อาหารเม็ด" height="90">
+                <img class="food-img" src="./src/img/อาหารเม็ด.png" alt="M" height="90">
               </label>
-              <button class="Button-i" id="pelletFood">i</button>
+              
             </div>
 
             <div class="food">
-              <input id="btn-2" type="radio" name="main-course" class="Button-pic" onclick="handleClick('ข้าว')">
+              <input id="btn-2" type="radio" name="main-course" class="Button-pic" onclick="handleClick('sizeL')">
               <label for="btn-2">
-                <img class="food-img" src="./src/img/ข้าว.png" alt="ข้าว" height="90">
+                <img class="food-img" src="./src/img/ข้าว.png" alt="L" height="90">
               </label>
-              <button class="Button-i" id="rice">i</button>
+              
             </div>
 
           </div>
           <hr class="hr">
 
-          <p class="t">2: Fish</p>
+          <p class="t">เลือกขอบที่ต้องการ/p>
 
           <div class="foods">
             <div class="food">
-              <input id="btn-3" type="radio" name="fish" class="Button-pic" onclick="handleClick('ปลาย่าง')">
+              <input id="btn-3" type="radio" name="fish" class="Button-pic" onclick="handleClick('ขอบไส้กรอก')">
               <label for="btn-3">
-                <img class="food-img" src="./src/img/ปลา1.png" alt="ปลา1" height="90">
+                <img class="food-img" src="./pic/ขอบไส้กรอก.jpg" alt="ขอบไส้กรอก" height="90">
               </label>
-              <button class="Button-i" id="grillFish">i</button>
+              
             </div>
 
             <div class="food">
-              <input id="btn-4" type="radio" name="fish" class="Button-pic" onclick="handleClick('ปลาดิบ')">
+              <input id="btn-4" type="radio" name="fish" class="Button-pic" onclick="handleClick('ขอบชีส')">
               <label for="btn-4">
-                <img class="food-img" src="./src/img/ปลา2.png" alt="ปลา2" height="90">
+                <img class="food-img" src="./pic/ขอบชีส.jpg" alt="ขอบชีส" height="90">
               </label>
-              <button class="Button-i" id="salmon">i</button>
+              
             </div>
           </div>
           <hr class="hr">
 
-          <p class="t">3: Snack</p>
+          <p class="t">เลือกหน้าที่ต้องการ</p>
 
-          <div class="snack">
-            <input id="btn-5" type="checkbox" name="snack" class="Button-pic" onclick="handleClick('ขนมแมว')">
-            <label for="btn-5">
-              <img class="food-img" src="./src/img/ขนมแมว.png" alt="ขนมแมว" height="85">
+          <div class="foods">
+            <div class="food">
+              <input id="btn-5" type="radio" name="fish" class="Button-pic" onclick="handleClick('ซีฟูดค็อกเทล')">
+              <label for="btn-5">
+                <img class="food-img" src="./pic/ซีฟูดค็อกเทล.jpg" alt="ซีฟูดค็อกเทล" height="90">
+              </label>
+              
+            </div>
+
+            <div class="food">
+              <input id="btn-6" type="radio" name="fish" class="Button-pic" onclick="handleClick('ฮาวายเอี้ยน')">
+              <label for="btn-6">
+                <img class="food-img" src="./pic/ฮาวายเอี้ยน.jpg" alt="ฮาวายเอี้ยน" height="90">
+              </label>
+              
+            </div>
+            <div class="food">
+              <input id="btn-7" type="radio" name="fish" class="Button-pic" onclick="handleClick('ดับเบิ้ลชีสพิซซ่า')">
+              <label for="btn-7">
+                <img class="food-img" src="./pic/ดับเบิ้ลชีสพิซซ่า.jpg" alt="ดับเบิ้ลชีสพิซซ่า" height="90">
+              </label>
+              
+            </div>
+          </div>
+          <hr class="hr">
+
+          <p class="t">เลือกวิธีการจัดส่ง</p>
+          <div class ="foods">
+          <div class="food"> <!--Delivery-->
+            <input id="btn-8" type="checkbox" name="snack" class="Button-pic" onclick="handleClick('ขนมแมว')">
+            <label for="btn-8">
+              <img class="food-img" src="./src/img/ขนมแมว.png" alt="Delivery" height="85">
             </label>
-            <button class="Button-i" id="snack">i</button>
+            
 
           </div>
+          <div class="food"> <!--pickup-->
+            <input id="btn-9" type="checkbox" name="snack" class="Button-pic" onclick="handleClick('ขนมแมว')">
+            <label for="btn-9">
+              <img class="food-img" src="./src/img/ขนมแมว.png" alt="pickup" height="85">
+            </label>
+            
+
+          </div>
+        </div>
           <br>
 
           <div class="foods">

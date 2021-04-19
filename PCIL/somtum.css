@@ -39,7 +39,7 @@
   .container0 {
     width: 76%;
     text-align: center;
-    background: #121212;
+    background: #ffffff;
     border-radius: 20px 0 0 20px;
   }
   .container2 {
@@ -199,7 +199,7 @@
   }
 
   .visa {
-    background-image: url("image/spi2.svg");
+    background-image: url("pic/spi2.svg");
     width: 50px;
     height: 50px;
     margin-right: 2%;
@@ -218,8 +218,8 @@
     margin-top: 7px;
     margin-bottom: 16px;
   }
-  .pukem {
-    background-image: url("image/pk_bc.svg");
+  .saikok {
+    background-image: url("pic/ขอบไส้กรอก.jpg");
     width: 50px;
     height: 50px;
     margin-top: 7px;
