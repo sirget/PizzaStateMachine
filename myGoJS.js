@@ -737,8 +737,17 @@ function highlightPath(
 }
 
 function toggleShowPath() {
-  if (toggleOpacity == 1) toggleOpacity = 0;
-  else toggleOpacity = 1;
+  if (toggleOpacity == 1)
+  {
+    toggleOpacity = 0;
+    document.getElementById("showPath").innerHTML = "Show Path";
+    
+  } 
+  else
+  {
+    toggleOpacity = 1;
+    document.getElementById("showPath").innerHTML = "Hide Path";
+  } 
   _toggleShowPath();
 }
 
