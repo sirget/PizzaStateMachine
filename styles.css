@@ -1,9 +1,8 @@
 :root {
-  --green: #4CAF50;
+  --green: #4caf50;
   --red: #cd071e;
   --light-grey: #e4e4e4;
   --white: #ffffff;
-  
 }
 
 body {
@@ -11,7 +10,7 @@ body {
   margin: 0;
 }
 
-.btn{
+.btn {
   border: none;
   border-radius: 6px;
   color: white;
@@ -23,19 +22,19 @@ body {
   font-size: 18px;
   font-family: "Roboto", "Prompt", sans-serif;
 }
-.btn-reset{
+.btn-reset {
   width: 40%;
   background-color: var(--red);
 }
 
-.btn-confirm{
+.btn-confirm {
   width: 60%;
   background-color: var(--green);
 }
-.selector-head{
+.selector-head {
   text-align: center;
 }
-.selector-foot{
+.selector-foot {
   display: flex;
   padding-top: 20px;
 }
@@ -52,7 +51,7 @@ body {
   background-color: var(--green);
   text-align: center;
 }
-.header-text{
+.header-text {
   padding: 16px;
   font-size: 36px;
   font-weight: bold;
@@ -62,7 +61,6 @@ body {
 }
 
 .input {
-  
 }
 
 .selector {
@@ -118,15 +116,15 @@ body {
   .header {
     grid-area: head;
   }
-  
+
   .dfa {
     grid-area: main;
   }
-  
+
   .input {
     grid-area: foot;
   }
-  
+
   .selector {
     grid-area: side;
     overflow: auto;

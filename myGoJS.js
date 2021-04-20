@@ -1,3 +1,9 @@
+var pathColorIn ='#cd071e'
+var pathColorOut ="#4caf50"
+var textColorIn ="#f19ca6"
+var textColorOut ='#b0e0b2'
+//var pathColorDefault =
+
 
 var now = 0;
 var oldFrom = -1,oldTo = 0,toggleOpacity=0;
@@ -279,7 +285,7 @@ function init() {
       new go.Binding("location", "loc", go.Point.parse).makeTwoWay(go.Point.stringify),
       $(go.Shape, "Circle",
         {
-          fill: "#d1d4c9", /* green */
+          fill: "white", 
           stroke: null,
           portId: "",
           fromLinkable: true, fromLinkableSelfNode: true, fromLinkableDuplicates: true,
@@ -288,7 +294,7 @@ function init() {
         }),
       $(go.TextBlock, "Start",
         {
-          font: "bold 10pt Bai Jamjuree, sans-serif",
+          font: "bold 10pt Prompt, sans-serif",
           textAlign: "center",
           stroke: "black",
         },
@@ -302,13 +308,14 @@ function init() {
       new go.Binding("location", "loc", go.Point.parse).makeTwoWay(go.Point.stringify),
       $(go.Shape, "Circle",
         {
-          fill: "#ff6768", /* green */
+          fill: "#cd071e", 
           stroke: null,
           portId: "",
           fromLinkable: true, fromLinkableSelfNode: true, fromLinkableDuplicates: true,
           toLinkable: true, toLinkableSelfNode: true, toLinkableDuplicates: true,
           // cursor: "pointer",
         }),
+      $(go.Shape, "Circle", { fill: null, desiredSize: new go.Size(70, 70), strokeWidth: 2, stroke: "whitesmoke" }),  
       $(go.TextBlock, "Start",
         {
           font: "bold 14pt Quicksand, sans-serif",
@@ -326,7 +333,7 @@ function init() {
       new go.Binding("location", "loc", go.Point.parse).makeTwoWay(go.Point.stringify),
       $(go.Shape, "Circle",
         {
-          fill: "#17b794",
+          fill: '#4caf50',
           stroke: null,
           portId: "",
           fromLinkable: true, fromLinkableSelfNode: true, fromLinkableDuplicates: true,
@@ -376,12 +383,12 @@ function init() {
       $(go.TextBlock, "transition",  // the label text
         {
           textAlign: "center",
-          font: "bold 9.9pt Bai Jamjuree, arial, sans-serif",
+          font: "bold 9.9pt Prompt, arial, sans-serif",
           // font: "15pt helvetica, arial, sans-serif",
           margin: 4,
           segmentIndex: 0,
           segmentFraction: 0.2,
-          background: '#121212',
+          //background: 'white',
         },
         new go.Binding("text").makeTwoWay(),
         new go.Binding("segmentIndex").makeTwoWay(),
@@ -405,9 +412,9 @@ function init() {
       },
       $(go.Shape, "Ellipse",
         {
-          fill: $(go.Brush, "Radial", { 0.5: "#ff004d", 1.0: "rgba(0, 0, 0, 0)" }),
+          fill: $(go.Brush, "Radial", { 0.5: "#ffff66" }),
           stroke: null,
-          desiredSize: new go.Size(150, 150)
+          desiredSize: new go.Size(90, 90)
         })
     );
   myDiagram.add(highlighter);
@@ -419,7 +426,7 @@ function init() {
   highlightNode(machine.current_State.key);
   
   resetPathColor()
-  highlightPath(-1,0, '#f30a49', "#F08080",'#17b794', "#40E0D0");
+  highlightPath(machine.current_State.key, next.key, pathColorIn, textColorIn,pathColorOut, textColorOut)
   
 }
 
@@ -491,7 +498,7 @@ function handleClick(input) {
   let next = machine.getNext(input)
 
   // highlight path from current state to next state
-  highlightPath(machine.current_State.key, next.key, '#f30a49', "#F08080",'#17b794', "#40E0D0")
+  highlightPath(machine.current_State.key, next.key, pathColorIn, textColorIn,pathColorOut, textColorOut)
   
   // highlight next state
   highlightNode(next.key)
