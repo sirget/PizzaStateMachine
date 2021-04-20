@@ -34,14 +34,14 @@ nodeDataArray = [
     { "from": 0, "to": 1, "text": "ขอบชีส", "segmentIndex": 2, "segmentFraction": 0.4 },
     { "from": 0, "to": 2, "text": "ขอบไส้กรอก", "segmentIndex": 2, "segmentFraction": 0.4 },
   
-    { "from": 1, "to": 1, "points": [273, -40, 300, -40, 300, -20, 240, -20,], "text": "ขอบไส้กรอก,\nเพิ่มชีส\nConfirm", "segmentIndex": 1, "segmentFraction": 1 },
+    { "from": 1, "to": 1, "points": [273, -40, 300, -40, 300, -20, 240, -20,], "text": "ขอบชีส,\nเพิ่มชีส\nConfirm", "segmentIndex": 1, "segmentFraction": 1 },
     { "from": 1, "to": 2, "points": [210, -35, 210, 115,], "text": "ขอบไส้กรอก", "segmentFraction": 0.3 },
     { "from": 1, "to": 3, "points": [280, -60, 340, -60, 340, -210, 400, -210], "text": "ฮาวายเอียน\n", "segmentIndex": 2, "segmentFraction": 0.4 },
     { "from": 1, "to": 4, "points": [280, -60, 340, -60, 340, -110, 400, -110], "text": "ซีฟู้ด", "segmentIndex": 2, "segmentFraction": 0.4 },
     { "from": 1, "to": 5, "points": [280, -60, 340, -60, 340, -10, 400, -10], "text": "ดับเบิ้ลชีส\n", "segmentIndex": 2, "segmentFraction": 0.4 },
   
     { "from": 2, "to": 1, "points": [230, 103, 230, -22,], "text": "ขอบชีส", "segmentFraction": 0.3 },
-    { "from": 2, "to": 2, "points": [273, 160, 300, 160, 300, 180, 240, 180,], "text": "ขอบชีส,\nเพิ่มชีส\nConfirm", "segmentIndex": 1, "segmentFraction": 1 },
+    { "from": 2, "to": 2, "points": [273, 160, 300, 160, 300, 180, 240, 180,], "text": "ขอบไส้กรอก,\nเพิ่มชีส\nConfirm", "segmentIndex": 1, "segmentFraction": 1 },
     { "from": 2, "to": 6, "points": [280, 140, 340, 140, 340, 90, 400, 90], "text": "ฮาวายเอียน\n", "segmentIndex": 2, "segmentFraction": 0.4 },
     { "from": 2, "to": 7, "points": [280, 140, 340, 140, 340, 190, 400, 190], "text": "ซีฟู้ด\n", "segmentIndex": 2, "segmentFraction": 0.4 },
     { "from": 2, "to": 8, "points": [280, 140, 340, 140, 340, 290, 400, 290], "text": "ดับเบิ้ลชีส\n", "segmentIndex": 2, "segmentFraction": 0.4 },
