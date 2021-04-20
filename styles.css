@@ -58,11 +58,11 @@ body {
   font-weight: bold;
 }
 .dfa {
-  background-color: yellow;
+  background-color: var(--light-grey);
 }
 
 .input {
-  background-color: blue;
+  
 }
 
 .selector {

@@ -10,6 +10,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+  <script src="go.js"></script>
+  <script src="myState.js"></script>
+  <script src="myGoJS.js"></script>
 </head>
 
 <body>
@@ -19,11 +22,13 @@
     </div>
 
     <div class="dfa">
-      <div>dfa</div>
+      <div id="myDiagramDiv" style="width: 1000px; height: 500px; background-color: #fff"></div>
     </div>
 
     <div class="input">
-      <div>input</div>
+      <div>
+        <p id="inputstring"></p>
+      </div>
     </div>
 
     <div class="selector">
@@ -33,13 +38,15 @@
 
       <h3>เลือกขอบ</h3>
       <div class="choice">
-        <input type="radio" id="sausage-crust" name="crust" class="pic-button" onclick="handleClick('ขอบไส้กรอก')">
-        <label for="sausage-crust">
+        <input id="ED_hotdog" type="radio" name="crust" class="pic-button"
+          onclick="handleClick('ขอบไส้กรอก')">
+        <label for="ED_hotdog">
           <img class="pic-cropper" src="./pic/ขอบไส้กรอก.jpg" alt="ขอบไส้กรอก">
           <p class="pic-label">ขอบไส้กรอก</p>
         </label>
-        <input type="radio" id="cheese-crust" name="crust" class="pic-button" onclick="handleClick('ขอบชีส')">
-        <label for="cheese-crust">
+        <input id="ED_cheese" type="radio" name="crust" class="pic-button"
+          onclick="handleClick('ขอบชีส')">
+        <label for="ED_cheese">
           <img class="pic-cropper" src="./pic/ขอบชีส.jpg" alt="ขอบชีส">
           <p class="pic-label">ขอบชีส</p>
         </label>
@@ -47,19 +54,20 @@
 
       <h3>เลือกหน้า</h3>
       <div class="choice">
-        <input type="radio" id="seafood" name="topping" class="pic-button" onclick="handleClick('ซีฟูดค็อกเทล')">
-        <label for="seafood">
+        <input id="FL_seafood" type="radio" name="topping" class="pic-button" onclick="handleClick('ซีฟู้ด')">
+        <label for="FL_seafood">
           <img class="pic-cropper" src="./pic/ซีฟูดค็อกเทล.jpg" alt="ซีฟูดค็อกเทล">
           <p class="pic-label">ซีฟูดค็อกเทล</p>
         </label>
-        <input type="radio" id="hawaiian" name="topping" class="pic-button" onclick="handleClick('ฮาวายเอี้ยน')">
-        <label for="hawaiian">
-          <img class="pic-cropper" src="./pic/ฮาวายเอี้ยน.jpg" alt="ฮาวายเอี้ยน">
-          <p class="pic-label">ฮาวายเอี้ยน</p>
+        <input id="FL_hawaii" type="radio" name="topping" class="pic-button"
+          onclick="handleClick('ฮาวายเอียน')">
+        <label for="FL_hawaii">
+          <img class="pic-cropper" src="./pic/ฮาวายเอี้ยน.jpg" alt="ฮาวายเอียน">
+          <p class="pic-label">ฮาวายเอียน</p>
         </label>
-        <input type="radio" id="double-cheese" name="topping" class="pic-button"
-          onclick="handleClick('ดับเบิ้ลชีสพิซซ่า')">
-        <label for="double-cheese">
+        <input id="FL_doublecheese" type="radio" name="topping" class="pic-button"
+          onclick="handleClick('ดับเบิ้ลชีส')">
+        <label for="FL_doublecheese">
           <img class="pic-cropper" src="./pic/ดับเบิ้ลชีสพิซซ่า.jpg" alt="ดับเบิ้ลชีสพิซซ่า">
           <p class="pic-label">ดับเบิ้ลชีสพิซซ่า</p>
         </label>
@@ -67,25 +75,24 @@
 
       <h3>เพิ่มชีส</h3>
       <div class="choice">
-        <input type="checkbox" id="cheese" name="add-on" class="pic-button" onclick="handleClick('ชีส')">
-        <label for="cheese">
+        <input id="EX_cheese" type="checkbox" name="add-on" class="pic-button" onclick="handleClick('เพิ่มชีส')">
+        <label for="EX_cheese">
           <img class="pic-cropper" src="./pic/ชีส.jpg" alt="MozzarellaCheese">
           <p class="pic-label">มอสซาเรลลาชีส</p>
         </label>
       </div>
       <div class="selector-foot">
-        <button class="btn btn-reset" id="restart-btn" onclick="restart()">Reset</button>
-        <button class="btn btn-confirm" onclick="(function() {
-              showResultPopup(`${machine.current_State.name}.png`);
-              handleClick('Confirm');
-            })()
-            ">Confirm</button>
+        <button id="CM_restart" class="btn btn-reset" onclick="restart()">Reset</button>
+        <button id="CM_confirm" class="btn btn-confirm">Confirm</button>
       </div>
     </div>
 
   </div>
 
 </body>
-<script src="scripts.js"></script>
+<script>
+  console.log("starto");
+  init();
+</script>
 
 </html>
