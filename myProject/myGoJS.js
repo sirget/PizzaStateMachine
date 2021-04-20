@@ -126,20 +126,7 @@ nodeDataArray = [
     { "from": 11, "to": 13, "text": "Confirm", "points": [675, 120, 840, 100, 840, 80], "segmentFraction": 0.75 },
     { "from": 12, "to": 13, "text": "Confirm", "points": [675, 220, 840, 200, 840, 80], "segmentFraction": 0.75 },
   
-    //Start and Reset
-    { "from": -1, "to": 0, "text": "" },
-    { "from": 1, "to": 0, "text": "Reset", "points": [240, -100, 240, -270, 40, -270, 40, 0,] },
-    { "from": 2, "to": 0, "text": "Reset", "points": [240, 180, 240, 350, 40, 350, 40, 80], },
-    { "from": 3, "to": 0, "text": "Reset", "points": [440, -250, 440, -270, 40, -270, 40, 0,], "segmentFraction": 0.5 },
-    { "from": 4, "to": 0, "text": "Reset", "points": [475, -130, 530, -160, 530, -270, 40, -270, 40, 0,], "segmentFraction": 0.25 },
-    { "from": 5, "to": 0, "text": "Reset", "points": [475, -30, 530, -60, 530, -270, 40, -270, 40, 0,], "segmentFraction": 0.25 },
-    { "from": 6, "to": 0, "text": "Reset", "points": [475, 110, 530, 140, 530, 350, 40, 350, 40, 80,], "segmentFraction": 0.45 },
-    { "from": 7, "to": 0, "text": "Reset", "points": [475, 210, 530, 240, 530, 350, 40, 350, 40, 80,], "segmentFraction": 0.45 },
-    { "from": 8, "to": 0, "text": "Reset", "points": [440, 330, 440, 350, 40, 350, 40, 80,], "segmentFraction": 0.5 },
-    { "from": 9, "to": 0, "text": "Reset", "points": [640, -200, 640, -270, 40, -270, 40, 0,] },
-    { "from": 10, "to": 0, "text": "Reset", "points": [680, -60, 710, -100, 710, -270, 40, -270, 40, 0,], "segmentFraction": 0.7 },
-    { "from": 11, "to": 0, "text": "Reset", "points": [680, 140, 710, 180, 710, 350, 40, 350, 40, 80,], "segmentFraction": 0.7 },
-    { "from": 12, "to": 0, "text": "Reset", "points": [640, 280, 640, 350, 40, 350, 40, 80,] , "segmentIndex": 0, "segmentFraction": 0.2 },
+    
   
   ];
    
