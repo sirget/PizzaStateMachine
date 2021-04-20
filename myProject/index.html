@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PizzaKomputer</title>
+
+    <script src="go.js"></script>
+    <script src="myState.js"></script>
+    <script src="myGoJS.js"></script>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//fonts.googleapis.com/css?family=Quicksand"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  </head>
+  <body>
+    <p id="name">Pizza Rai Dee</p>
+    <div
+      id="myDiagramDiv"
+      style="width: 1000px; height: 800px; background-color: #121212"
+    ></div>
+    <div>
+      <div class="edge" style="margin: 20px">
+        <button id="ED_cheese" onclick="handleClick('ขอบชีส')">ขอบชีส</button>
+        <button id="ED_hotdog" onclick="handleClick('ขอบไส้กรอก')">
+          ขอบไส้กรอก
+        </button>
+      </div>
+      <div class="flavor" style="margin: 20px">
+        <button id="FL_hawaii" onclick="handleClick('ฮาวายเอียน')">
+          ฮาวายเอียน
+        </button>
+        <button id="FL_seafood" onclick="handleClick('ซีฟู้ด')">ซีฟู้ด</button>
+        <button id="FL_doublecheese" onclick="handleClick('ดับเบิ้ลชีส')">
+          ดับเบิ้ลชีส
+        </button>
+      </div>
+      <div class="extra" style="margin: 20px">
+        <button id="EX_cheese" onclick="handleClick('เพิ่มชีส')">
+          เพิ่มชีส
+        </button>
+      </div>
+      <div class="command" style="margin: 20px">
+        <button id="CM_reset" onclick="handleClick('Reset')">Reset</button>
+        <button id="CM_restart" onclick="restart()">Restart</button>
+        <button id="CM_confirm" onclick="handleClick('Confirm')">
+          Confirm
+        </button>
+      </div>
+    </div>
+    <div>
+      <p id="inputstring"></p>
+    </div>
+  </body>
+  <script>
+    console.log("starto");
+    init();
+  </script>
+</html>

@@ -441,8 +441,8 @@ function init() {
 
 function restart() {
   document.getElementById('inputstring').innerHTML = ''
-  document.getElementById('name').innerHTML = 'ตำอะไรเอ่ย'
-  document.getElementById('imgout').src =  'image/' + imgmap['Start_state'] + '.png'
+  document.getElementById('name').innerHTML = 'Pizza Rai Dee'
+  // document.getElementById('imgout').src =  'image/' + imgmap['Start_state'] + '.png'
   machine.current_State = { name: 'Start_state', key: 0 }
   machine.prev_State = { name: 'none', key: -1 }
   highlightNode(machine.current_State.key)
@@ -461,18 +461,20 @@ function restart() {
     Confirm: false,
     Reset: false,
   }
+  console.log("Current : "+machine.current_State.name)
 }
 
-function handleClick(bottonName) {
-
-  document.getElementById('inputstring').innerHTML += ' ' + bottonName
+function handleClick(input) {
+  
+  document.getElementById('inputstring').innerHTML += ' ' + input
   // botton something
 
   // เลือกหน้า(flavor) เลือกได้แค่หน้าเดียว
-  let indx = flavor.indexOf(bottonName)
+  let indx = flavor.indexOf(input)
+  
   if (indx >= 0) {
-    if (Botton.state[bottonName]) {
-      document.getElementById(Botton.map[bottonName]).checked = false
+    if (Botton.state[input]) {
+      document.getElementById(Botton.map[input]).checked = false
       Botton.state[flavor[indx]] = false
     }
     else {
@@ -485,7 +487,7 @@ function handleClick(bottonName) {
     }
   }
 
-  machine.input_String.push(bottonName)
+  machine.input_String.push(input)
 
   // clear highlight path 
   highlightPath(machine.prev_State.key, machine.current_State.key, '#9C9C9C','#828282','#9C9C9C','#828282')
@@ -495,7 +497,7 @@ function handleClick(bottonName) {
   machine.prev_State = machine.current_State
 
   // get next state
-  let next = machine.getNext(bottonName)
+  let next = machine.getNext(input)
 
   // highlight path from current state to next state
   highlightPath(machine.current_State.key, next.key, '#f30a49', "#F08080",'#17b794', "#40E0D0")
@@ -503,50 +505,50 @@ function handleClick(bottonName) {
   // highlight next state
   highlightNode(next.key)
 
-  if (lfc1.indexOf(next.name) >= 0) {
-    document.getElementById('plara').checked = false
-    Botton.state['เพิ่มชีส'] = false
-  }
-  if (lfc2.indexOf(next.name) >= 0) {
-    for (let i = 0; i < flavor.length; i++) {
-      document.getElementById(Botton.map[flavor[i]]).checked = false
-      Botton.state[flavor[i]] = false
-    }
-  }  
+  // --------------------Clear radio btn-----------------------
+  // if (clearList1.indexOf(next.name) >= 0) {
+  //   //document.getElementById('เพิ่มชีส').checked = false
+  //   Botton.state['เพิ่มชีส'] = false
+  // }
+  // if (clearList2.indexOf(next.name) >= 0) {
+  //   for (let i = 0; i < flavor.length; i++) {
+  //     //document.getElementById(Botton.map[flavor[i]]).checked = false
+  //     Botton.state[flavor[i]] = false
+  //   }
+  // }  
 
-  
-
-  if (next.name == 'Start_state') {
-    document.getElementById('pednoi').checked = false
-    Botton.state['ขอบชีส'] = false
-    document.getElementById('pedmak').checked = false
-    Botton.state['ขอบไส้กรอก'] = false
-  }
-
-
-  // set current state = next state
-  machine.setCurrentState(next)
+  // if (next.name == 'Start_state') {
+  //   document.getElementById('pednoi').checked = false
+  //   Botton.state['ขอบชีส'] = false
+  //   document.getElementById('pedmak').checked = false
+  //   Botton.state['ขอบไส้กรอก'] = false
+  // }
 
 
+ // set current state = next state
+ machine.setCurrentState(next)
+
+  // --------------------- Manage SUM img and name -------------------------------
   if(['Confirm','Trap_state'].indexOf(machine.current_State.name) < 0){
-    document.getElementById('name').innerHTML = machine.current_State.name.split('_').join('')
-    document.getElementById('imgout').src =  'image/' + imgmap[machine.current_State.name] + '.png'
+    document.getElementById('name').innerHTML = "Pizza : "+ machine.current_State.name.split('_').join('')
+   
+    //document.getElementById('imgout').src =  'image/' + imgmap[machine.current_State.name] + '.png'
   }
   if(machine.current_State.name == 'Start_state'){
-    document.getElementById('name').innerHTML = 'ตำอะไรเอ่ย'
-    document.getElementById('imgout').src =  'image/' + imgmap['Start_state'] + '.png'
+    document.getElementById('name').innerHTML = 'Pizza Rai Dee'
+    //document.getElementById('imgout').src =  'image/' + imgmap['Start_state'] + '.png'
   }
 
+  
+  console.log("Current : "+machine.current_State.name)
+  //saveKaikemPlara()
 
-  console.log(machine.current_State.name)
-  saveKaikemPlara()
 
 
-
-  if(bottonName == 'Confirm'&& document.getElementById('name').innerHTML !="ตำอะไรเอ่ย"&& machine.current_State.name == "Confirm" ){
+  if(input == 'Confirm'&& document.getElementById('name').innerHTML !="Pizza Rai Dee"&& machine.current_State.name == "Confirm" ){
     let timerInterval
     Swal.fire({
-      title: 'เมนูของคุณ'+' '+document.getElementById('name').innerHTML+'!👍',
+      title: document.getElementById('name').innerHTML+'!👍',
       imageUrl: 'image/papaya.svg',
       imageWidth: 160,
       imageHeight: 130, 
@@ -571,7 +573,7 @@ function handleClick(bottonName) {
     }).then((result) => {
       /* Read more about handling dismissals below */
       if (result.dismiss === Swal.DismissReason.timer) {
-        console.log('I was closed by the timer')
+        console.log('Swal was closed by the timer')
       }
     })
 
@@ -610,12 +612,12 @@ function saveKaikemPlara()
 
 let Botton = {
   map: {
-    ขอบชีส: 'pednoi',
-    ขอบไส้กรอก: 'pedmak',
-    ฮาวายเอียน: 'pukem',
-    ซีฟู้ด: 'muyoo',
-    ดับเบิ้ลชีส: 'kaikem',
-    เพิ่มชีส: 'plara',
+    ขอบชีส: 'ED_cheese',
+    ขอบไส้กรอก: 'ED_hotdog',
+    ฮาวายเอียน: 'FL_hawaii',
+    ซีฟู้ด: 'FL_seafood',
+    ดับเบิ้ลชีส: 'FL_doublecheese',
+    เพิ่มชีส: 'EX_cheese',
     Confirm: 'Confirm',
     Reset: 'Reset',
   },
@@ -650,10 +652,10 @@ let imgmap = {
 
 
 let flavor = ['ฮาวายเอียน', 'ซีฟู้ด', 'ดับเบิ้ลชีส']
-let lfc1 = ['Start_state', 'ขอบชีส', 'ขอบไส้กรอก', 'ปูเค็ม_เผ็ดน้อย', 'หมูยอ_เผ็ดน้อย'
-  , 'ไข่เค็ม_เผ็ดน้อย', 'ปูเค็ม_เผ็ดมาก', 'หมูยอ_เผ็ดมาก', 'ไข่เค็ม_เผ็ดมาก'] // listForClearActiveBotton
+let clearList1 = ['Start_state', 'ขอบชีส', 'ขอบไส้กรอก', 'ฮาวายเอียน_ขอบชีส', 'ซีฟู้ด_ขอบชีส'
+  , 'ดับเบิ้ลชีส_ขอบชีส', 'ฮาวายเอียน_ขอบไส้กรอก', 'ซีฟู้ด_ขอบไส้กรอก', 'ดับเบิ้ลชีส_ขอบไส้กรอก'] // listForClearActiveBotton
 
-let lfc2 = ['Start_state', 'ตำไทย_เผ็ดน้อย', 'ตำไทย_เผ็ดมาก'] // same
+let clearList2 = ['Start_state', 'ขอบชีส', 'ขอบไส้กรอก'] // same
 let lfc3 = []
 
-let bottonList = ['pednoi','pedmak','pukem','muyoo','kaikem','plara']
+let bottonList = ['ED_cheese','ED_hotdog','FL_hawaii','FL_seafood','FL_doublecheese','EX_cheese']

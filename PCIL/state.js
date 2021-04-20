@@ -1,4 +1,4 @@
-let machine = {
+let machine1 = {
     current_State:  {
         name : 'Start_state',
         key : 0
