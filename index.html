@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizza Computer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header-text">Pizza Computer</div>
+    </div>
+
+    <div class="dfa">
+      <div>dfa</div>
+    </div>
+
+    <div class="input">
+      <div>input</div>
+    </div>
+
+    <div class="selector">
+      <div class="selector-head">
+        <h2>เลือกพิซซ่าที่คุณต้องการ</h2>
+      </div>
+
+      <h3>เลือกขอบ</h3>
+      <div class="choice">
+        <input type="radio" id="sausage-crust" name="crust" class="pic-button" onclick="handleClick('ขอบไส้กรอก')">
+        <label for="sausage-crust">
+          <img class="pic-cropper" src="./pic/ขอบไส้กรอก.jpg" alt="ขอบไส้กรอก">
+          <p class="pic-label">ขอบไส้กรอก</p>
+        </label>
+        <input type="radio" id="cheese-crust" name="crust" class="pic-button" onclick="handleClick('ขอบชีส')">
+        <label for="cheese-crust">
+          <img class="pic-cropper" src="./pic/ขอบชีส.jpg" alt="ขอบชีส">
+          <p class="pic-label">ขอบชีส</p>
+        </label>
+      </div>
+
+      <h3>เลือกหน้า</h3>
+      <div class="choice">
+        <input type="radio" id="seafood" name="topping" class="pic-button" onclick="handleClick('ซีฟูดค็อกเทล')">
+        <label for="seafood">
+          <img class="pic-cropper" src="./pic/ซีฟูดค็อกเทล.jpg" alt="ซีฟูดค็อกเทล">
+          <p class="pic-label">ซีฟูดค็อกเทล</p>
+        </label>
+        <input type="radio" id="hawaiian" name="topping" class="pic-button" onclick="handleClick('ฮาวายเอี้ยน')">
+        <label for="hawaiian">
+          <img class="pic-cropper" src="./pic/ฮาวายเอี้ยน.jpg" alt="ฮาวายเอี้ยน">
+          <p class="pic-label">ฮาวายเอี้ยน</p>
+        </label>
+        <input type="radio" id="double-cheese" name="topping" class="pic-button"
+          onclick="handleClick('ดับเบิ้ลชีสพิซซ่า')">
+        <label for="double-cheese">
+          <img class="pic-cropper" src="./pic/ดับเบิ้ลชีสพิซซ่า.jpg" alt="ดับเบิ้ลชีสพิซซ่า">
+          <p class="pic-label">ดับเบิ้ลชีสพิซซ่า</p>
+        </label>
+      </div>
+
+      <h3>เพิ่มชีส</h3>
+      <div class="choice">
+        <input type="checkbox" id="cheese" name="add-on" class="pic-button" onclick="handleClick('ชีส')">
+        <label for="cheese">
+          <img class="pic-cropper" src="./pic/ชีส.jpg" alt="MozzarellaCheese">
+          <p class="pic-label">มอสซาเรลลาชีส</p>
+        </label>
+      </div>
+      <div class="selector-foot">
+        <button class="btn btn-reset" id="restart-btn" onclick="restart()">Reset</button>
+        <button class="btn btn-confirm" onclick="(function() {
+              showResultPopup(`${machine.current_State.name}.png`);
+              handleClick('Confirm');
+            })()
+            ">Confirm</button>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+<script src="scripts.js"></script>
+
+</html>
