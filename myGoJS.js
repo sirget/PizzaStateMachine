@@ -5,7 +5,8 @@ nodeDataArray = [
     { "key": -1, "loc": "-75 28" },
   
     { "key": 0, "loc": "0 0", "text": "Start\nstate", "category": "rStart" },
-  
+
+    
     { "key": 1, "loc": "200 -100", "text": "ขอบ\nชีส", "category": "Start" },
     { "key": 2, "loc": "200 100", "text": "ขอบ\nไส้กรอก", "category": "Start" },
   
@@ -34,14 +35,16 @@ nodeDataArray = [
     { "from": 0, "to": 1, "text": "ขอบชีส", "segmentIndex": 2, "segmentFraction": 0.4 },
     { "from": 0, "to": 2, "text": "ขอบไส้กรอก", "segmentIndex": 2, "segmentFraction": 0.4 },
   
-    { "from": 1, "to": 1, "points": [273, -40, 300, -40, 300, -20, 240, -20,], "text": "ขอบไส้กรอก,\nเพิ่มชีส\nConfirm", "segmentIndex": 1, "segmentFraction": 1 },
+    { "from": 1, "to": 0, "points": [240, -100, 240, -150,60,-150,60,10], "text": "ขอบชีส", "segmentIndex": 1, "segmentFraction": 0.5 },
+    { "from": 1, "to": 1, "points": [273, -40, 300, -40, 300, -20, 240, -20,], "text": "เพิ่มชีส\nConfirm", "segmentIndex": 1, "segmentFraction": 1 },
     { "from": 1, "to": 2, "points": [210, -35, 210, 115,], "text": "ขอบไส้กรอก", "segmentFraction": 0.3 },
     { "from": 1, "to": 3, "points": [280, -60, 340, -60, 340, -210, 400, -210], "text": "ฮาวายเอียน\n", "segmentIndex": 2, "segmentFraction": 0.4 },
     { "from": 1, "to": 4, "points": [280, -60, 340, -60, 340, -110, 400, -110], "text": "ซีฟู้ด", "segmentIndex": 2, "segmentFraction": 0.4 },
     { "from": 1, "to": 5, "points": [280, -60, 340, -60, 340, -10, 400, -10], "text": "ดับเบิ้ลชีส\n", "segmentIndex": 2, "segmentFraction": 0.4 },
-  
+    
+    { "from": 2, "to": 0, "points": [240, 100, 240, 230,60,230,60,70], "text": "ขอบไส้กรอก", "segmentIndex": 1, "segmentFraction": 0.5 },
     { "from": 2, "to": 1, "points": [230, 103, 230, -22,], "text": "ขอบชีส", "segmentFraction": 0.3 },
-    { "from": 2, "to": 2, "points": [273, 160, 300, 160, 300, 180, 240, 180,], "text": "ขอบชีส,\nเพิ่มชีส\nConfirm", "segmentIndex": 1, "segmentFraction": 1 },
+    { "from": 2, "to": 2, "points": [273, 160, 300, 160, 300, 180, 240, 180,], "text": "เพิ่มชีส\nConfirm", "segmentIndex": 1, "segmentFraction": 1 },
     { "from": 2, "to": 6, "points": [280, 140, 340, 140, 340, 90, 400, 90], "text": "ฮาวายเอียน\n", "segmentIndex": 2, "segmentFraction": 0.4 },
     { "from": 2, "to": 7, "points": [280, 140, 340, 140, 340, 190, 400, 190], "text": "ซีฟู้ด\n", "segmentIndex": 2, "segmentFraction": 0.4 },
     { "from": 2, "to": 8, "points": [280, 140, 340, 140, 340, 290, 400, 290], "text": "ดับเบิ้ลชีส\n", "segmentIndex": 2, "segmentFraction": 0.4 },
@@ -108,13 +111,12 @@ nodeDataArray = [
     { "from": 12, "to": 10, "text": "ขอบชีส", "points": [678, 250, 740, 240, 740, -20, 675, -40], "segmentIndex": 0, "segmentFraction": 0.5 },
     { "from": 12, "to": 11, "text": "ฮาวายเอียน", "points": [670, 215, 670, 165], "segmentIndex": 0, "segmentFraction": 0.5 },
     { "from": 12, "to": 12, "text": "ขอบไส้กรอก,\nซีฟู้ด,\nดับเบิ้ลชีส", "points": [660, 275, 660, 300, 690, 300, 690, 270, 666, 270,], "segmentIndex": 1, "segmentFraction": 0.5 },
-    { "from": 13, "to": 14, "segmentFraction": 0.5, "segmentIndex": 2, "text": "ขอบชีส,ขอบไส้กรอก,\nปูเค็ม,ซีฟู้ด,\nดับเบิ้ลชีส,เพิ่มชีส,\nReset,confirm" },
+    { "from": 13, "to": 14, "segmentFraction": 0.5, "segmentIndex": 2, "text": "ขอบชีส,ขอบไส้กรอก,\nฮาวายเอียน,ซีฟู้ด,\nดับเบิ้ลชีส,เพิ่มชีส,\nReset,confirm" },
   
-    { "from": 14, "to": 14, "points": [1060, 80, 1060, 120, 1005, 120, 1005, 70,], "segmentIndex": 1, "segmentFraction": 0.5, "text": "ขอบชีส,ขอบไส้กรอก,\nปูเค็ม,ซีฟู้ด,\nดับเบิ้ลชีส,เพิ่มชีส,\nReset,Confirm" },
+    { "from": 14, "to": 14, "points": [1060, 80, 1060, 120, 1005, 120, 1005, 70,], "segmentIndex": 1, "segmentFraction": 0.5, "text": "ขอบชีส,ขอบไส้กรอก,\nฮาวายเอียน,ซีฟู้ด,\nดับเบิ้ลชีส,เพิ่มชีส,\nReset,Confirm" },
   
     //Confirm
-    //{ "from": 1, "to": 13, "text": "Confirm", "points": [240, -20, 350, 40, 800, 40], "segmentFraction": 0.4 },
-    //{ "from": 2, "to": 13, "text": "Confirm", "points": [240, 100, 350, 40, 800, 40], "segmentFraction": 0.4 },
+
     { "from": 3, "to": 13, "text": "Confirm", "points": [465, -180, 560, -170, 560, 40, 800, 40], "segmentFraction": 0.3 },
     { "from": 4, "to": 13, "text": "Confirm", "points": [465, -80, 560, -70, 560, 40, 800, 40], "segmentFraction": 0.3 },
     { "from": 5, "to": 13, "text": "Confirm", "points": [460, 20, 500, 40, 800, 40], "segmentFraction": 0.5 },
@@ -126,20 +128,7 @@ nodeDataArray = [
     { "from": 11, "to": 13, "text": "Confirm", "points": [675, 120, 840, 100, 840, 80], "segmentFraction": 0.75 },
     { "from": 12, "to": 13, "text": "Confirm", "points": [675, 220, 840, 200, 840, 80], "segmentFraction": 0.75 },
   
-    //Start and Reset
-    { "from": -1, "to": 0, "text": "" },
-    { "from": 1, "to": 0, "text": "Reset", "points": [240, -100, 240, -270, 40, -270, 40, 0,] },
-    { "from": 2, "to": 0, "text": "Reset", "points": [240, 180, 240, 350, 40, 350, 40, 80], },
-    { "from": 3, "to": 0, "text": "Reset", "points": [440, -250, 440, -270, 40, -270, 40, 0,], "segmentFraction": 0.5 },
-    { "from": 4, "to": 0, "text": "Reset", "points": [475, -130, 530, -160, 530, -270, 40, -270, 40, 0,], "segmentFraction": 0.25 },
-    { "from": 5, "to": 0, "text": "Reset", "points": [475, -30, 530, -60, 530, -270, 40, -270, 40, 0,], "segmentFraction": 0.25 },
-    { "from": 6, "to": 0, "text": "Reset", "points": [475, 110, 530, 140, 530, 350, 40, 350, 40, 80,], "segmentFraction": 0.45 },
-    { "from": 7, "to": 0, "text": "Reset", "points": [475, 210, 530, 240, 530, 350, 40, 350, 40, 80,], "segmentFraction": 0.45 },
-    { "from": 8, "to": 0, "text": "Reset", "points": [440, 330, 440, 350, 40, 350, 40, 80,], "segmentFraction": 0.5 },
-    { "from": 9, "to": 0, "text": "Reset", "points": [640, -200, 640, -270, 40, -270, 40, 0,] },
-    { "from": 10, "to": 0, "text": "Reset", "points": [680, -60, 710, -100, 710, -270, 40, -270, 40, 0,], "segmentFraction": 0.7 },
-    { "from": 11, "to": 0, "text": "Reset", "points": [680, 140, 710, 180, 710, 350, 40, 350, 40, 80,], "segmentFraction": 0.7 },
-    { "from": 12, "to": 0, "text": "Reset", "points": [640, 280, 640, 350, 40, 350, 40, 80,] , "segmentIndex": 0, "segmentFraction": 0.2 },
+  
   
   ];
    
@@ -441,7 +430,7 @@ function init() {
 
 function restart() {
   document.getElementById('inputstring').innerHTML = ''
-  document.getElementById('name').innerHTML = 'Pizza Rai Dee'
+  document.getElementById('name').innerHTML = 'เลือกพิซซ่าที่คุณต้องการ'
   // document.getElementById('imgout').src =  'image/' + imgmap['Start_state'] + '.png'
   machine.current_State = { name: 'Start_state', key: 0 }
   machine.prev_State = { name: 'none', key: -1 }
@@ -469,23 +458,25 @@ function handleClick(input) {
   document.getElementById('inputstring').innerHTML += ' ' + input
   // botton something
 
+
   // เลือกหน้า(flavor) เลือกได้แค่หน้าเดียว
-  let indx = flavor.indexOf(input)
+  // let indx = flavor.indexOf(input)
   
-  if (indx >= 0) {
-    if (Botton.state[input]) {
-      document.getElementById(Botton.map[input]).checked = false
-      Botton.state[flavor[indx]] = false
-    }
-    else {
-      Botton.state[flavor[indx]] = true
-    }
-    for (let i = 0; i < flavor.length; i++) {
-      if (i != indx) {
-        Botton.state[flavor[i]] = false
-      }
-    }
-  }
+  // if (indx >= 0) {
+  //   if (Botton.state[input]) {
+  //     document.getElementById(Botton.map[input]).checked = false
+  //     Botton.state[flavor[indx]] = false
+  //   }
+  //   else {
+  //     Botton.state[flavor[indx]] = true
+  //   }
+  //   for (let i = 0; i < flavor.length; i++) {
+  //     if (i != indx) {
+  //       Botton.state[flavor[i]] = false
+  //     }
+  //   }
+  // }
+
 
   machine.input_String.push(input)
 
@@ -506,27 +497,28 @@ function handleClick(input) {
   highlightNode(next.key)
 
   // --------------------Clear radio btn-----------------------
-  // if (clearList1.indexOf(next.name) >= 0) {
-  //   document.getElementById('เพิ่มชีส').checked = false
-  //   Botton.state['เพิ่มชีส'] = false
-  // }
-  // if (clearList2.indexOf(next.name) >= 0) {
-  //   for (let i = 0; i < flavor.length; i++) {
-  //     document.getElementById(Botton.map[flavor[i]]).checked = false
-  //     Botton.state[flavor[i]] = false
-  //   }
-  // }  
+  if (clearList1.indexOf(next.name) >= 0) {
+    document.getElementById('EX_cheese').checked = false
+    Botton.state['เพิ่มชีส'] = false
+  }
+  if (clearList2.indexOf(next.name) >= 0) {
+    for (let i = 0; i < flavor.length; i++) {
+      document.getElementById(Botton.map[flavor[i]]).checked = false
+      Botton.state[flavor[i]] = false
+    }
+  }  
 
-  // if (next.name == 'Start_state') {
-  //   document.getElementById('ED_cheese').checked = false
-  //   Botton.state['ขอบชีส'] = false
-  //   document.getElementById('ED_hotdog').checked = false
-  //   Botton.state['ขอบไส้กรอก'] = false
-  // }
+  if (next.name == 'Start_state') {
+    document.getElementById('ED_cheese').checked = false
+    Botton.state['ขอบชีส'] = false
+    document.getElementById('ED_hotdog').checked = false
+    Botton.state['ขอบไส้กรอก'] = false
+  }
 
 
  // set current state = next state
  machine.setCurrentState(next)
+
 
   // --------------------- Manage SUM img and name -------------------------------
   if(['Confirm','Trap_state'].indexOf(machine.current_State.name) < 0){
@@ -541,18 +533,34 @@ function handleClick(input) {
 
   
   console.log("Current : "+machine.current_State.name)
-  //saveKaikemPlara()
+  // -------- can't ExtraCheese on Double cheese ----------------------
+  if((machine.current_State.key>=9) && input == "ดับเบิ้ลชีส"){
+    console.log("Can't Extra Cheese on Double cheese !!!")
+    document.getElementById('FL_doublecheese').checked = false
+    Botton.state['ดับเบิ้ลชีส'] = false
+    if(machine.current_State.name.indexOf('ฮาวายเอียน') >= 0){
+      document.getElementById('FL_hawaii').checked = true
+      Botton.state['ฮาวายเอียน'] = true
+    }
+    else if(machine.current_State.name.indexOf('ซีฟู้ด') >= 0){
+      document.getElementById('FL_seafood').checked = true
+      Botton.state['ซีฟู้ด'] = true
+    }
+
+    
+  
+  }
 
 
 
-  if(input == 'Confirm'&& document.getElementById('name').innerHTML !="Pizza Rai Dee"&& machine.current_State.name == "Confirm" ){
+  if(input == 'Confirm'&& document.getElementById('name').innerHTML !="เลือกพิซซ่าที่คุณต้องการ"&& machine.current_State.name == "Confirm" ){
     let timerInterval
     Swal.fire({
       title: document.getElementById('name').innerHTML+'!👍',
-      imageUrl: 'image/papaya.svg',
+      imageUrl: '',//insert PIC
       imageWidth: 160,
       imageHeight: 130, 
-      imageAlt: 'Custom image', 
+      imageAlt: 'Your Pizza image', 
       timerProgressBar: true,
       timer:3000,
       onBeforeOpen: () => {
@@ -592,21 +600,10 @@ function resetPathColor(){
   }
 }
 
-function saveKaikemPlara()
-{
-  if(machine.current_State.name.indexOf('ไข่') < 0){
-    document.getElementById('kaikem').checked = false
-    Botton.state['ดับเบิ้ลชีส'] = false
-    if(machine.current_State.name.indexOf('ปู') >= 0){
-      document.getElementById('pukem').checked = true
-      Botton.state['ฮาวายเอียน'] = true
-    }
-    else if(machine.current_State.name.indexOf('หมู') >= 0){
-      document.getElementById('muyoo').checked = true
-      Botton.state['ซีฟู้ด'] = true
-    }
-  }
-}
+
+  
+
+
 
 
 
@@ -634,28 +631,13 @@ let Botton = {
 }
 
 
-let imgmap = {
-  Start_state : 'xxx',
-  ตำไทย_เผ็ดมาก: '1TumThai',
-  ตำไทย_เผ็ดน้อย: '1TumThai',
-  ปูเค็ม_เผ็ดน้อย: 'Poo',
-  หมูยอ_เผ็ดน้อย: '2Mooyo',
-  ไข่เค็ม_เผ็ดน้อย: '3Khaikem',
-  ปูเค็ม_เผ็ดมาก: 'Poo',
-  หมูยอ_เผ็ดมาก: '2Mooyo',
-  ไข่เค็ม_เผ็ดมาก: '3Khaikem',
-  ตำปู_ปลาร้า_เผ็ดน้อย: '4Plara',
-  ตำหมูยอ_ปลาร้า_เผ็ดน้อย: '2Mooyo',
-  ตำปู_ปลาร้า_เผ็ดมาก: '4Plara',
-  ตำหมูยอ_ปลาร้า_เผ็ดมาก: '2Mooyo'
-}
-
 
 let flavor = ['ฮาวายเอียน', 'ซีฟู้ด', 'ดับเบิ้ลชีส']
+let edge = ['ฮาวายเอียน', 'ซีฟู้ด', 'ดับเบิ้ลชีส']
 let clearList1 = ['Start_state', 'ขอบชีส', 'ขอบไส้กรอก', 'ฮาวายเอียน_ขอบชีส', 'ซีฟู้ด_ขอบชีส'
   , 'ดับเบิ้ลชีส_ขอบชีส', 'ฮาวายเอียน_ขอบไส้กรอก', 'ซีฟู้ด_ขอบไส้กรอก', 'ดับเบิ้ลชีส_ขอบไส้กรอก'] // listForClearActiveBotton
 
 let clearList2 = ['Start_state', 'ขอบชีส', 'ขอบไส้กรอก'] // same
-let lfc3 = []
+
 
 let bottonList = ['ED_cheese','ED_hotdog','FL_hawaii','FL_seafood','FL_doublecheese','EX_cheese']
