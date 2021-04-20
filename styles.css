@@ -17,6 +17,17 @@ body {
   background-color: var(--grey);
   border-radius: 16px;
 }
+.showPath {
+  border-radius: 4px;
+
+  border: none;
+  cursor: pointer;
+
+  padding: 10px;
+  background-color: var(--green);
+  color: white;
+  font-family: "Prompt", sans-serif;
+}
 
 .btn {
   border: none;
@@ -65,11 +76,10 @@ body {
   font-weight: bold;
 }
 .dfa {
-   margin: 20px;
+  margin: 20px;
 }
-.dfa-content{
+.dfa-content {
   height: 600px;
-  
 }
 
 .input {

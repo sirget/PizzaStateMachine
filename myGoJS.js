@@ -671,6 +671,9 @@ linkDataArray = [
     points: [675, 220, 840, 200, 840, 80],
     segmentFraction: 0.75,
   },
+
+  //Start -1
+  { "from": -1, "to": 0, "text": "" },
 ];
 
 var $ = go.GraphObject.make; // for conciseness in defining templates
