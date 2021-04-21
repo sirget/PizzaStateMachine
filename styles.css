@@ -82,7 +82,7 @@ p {
 }
 .selector-foot {
   display: flex;
-  padding-top: 10px;
+  padding-top: 10%;
 }
 .mycontainer {
   display: block;
@@ -240,15 +240,15 @@ p {
   .mycontainer {
     display: grid;
     grid-template-columns: 500px 1fr 1fr;
-    grid-template-rows: 80px 600px 1fr 40px;
+    grid-template-rows: 80px 600px 200px;
     grid-template-areas:
       "head head head"
       "side main  main "
       "side input  input ";
-
     height: 100vh;
     grid-gap: 10px;
   }
+
   .header {
     grid-area: head;
   }
