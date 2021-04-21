@@ -61,13 +61,15 @@ body {
 .container {
   display: block;
   justify-content: space-around;
+  height: 90%;
 }
 
 .container div {
   /* border: 1px solid; */
 }
 
-.header {
+.header,
+.footer {
   background-color: var(--green);
   text-align: center;
 }
@@ -206,7 +208,7 @@ body {
       "head head head"
       "main  main side"
       "foot  foot side";
-    height: 100vh;
+    height: 98vh;
     grid-gap: 10px;
   }
   .header {
