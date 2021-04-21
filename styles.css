@@ -58,13 +58,13 @@ body {
   display: flex;
   padding-top: 10px;
 }
-.container {
+.mycontainer {
   display: block;
   justify-content: space-around;
   height: 90%;
 }
 
-.container div {
+.mycontainer div {
   /* border: 1px solid; */
 }
 
@@ -200,7 +200,7 @@ body {
 }
 
 @media only screen and (min-width: 900px) {
-  .container {
+  .mycontainer {
     display: grid;
     grid-template-columns: 1fr 1fr 420px;
     grid-template-rows: 80px 600px 1fr;
@@ -208,7 +208,7 @@ body {
       "head head head"
       "main  main side"
       "foot  foot side";
-    height: 98vh;
+    height: 100vh;
     grid-gap: 10px;
   }
   .header {
