@@ -1170,7 +1170,7 @@ function handleClick(input) {
   ) {
     let timerInterval;
     Swal.fire({
-      title: document.getElementById("name").innerHTML + "\n✔️",
+      title: document.getElementById("name").innerHTML + "\n🍕",
       // imageUrl: "", //insert PIC
       // imageWidth: 160,
       // imageHeight: 130,
