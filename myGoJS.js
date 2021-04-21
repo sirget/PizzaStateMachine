@@ -728,13 +728,13 @@ function toggleShowPath() {
   if (toggleOpacity == 1)
   {
     toggleOpacity = 0;
-    document.getElementById("showPath").innerHTML = "Show Path";
+    document.getElementById("showPath").innerHTML = "Hide Path";
     
   } 
   else
   {
     toggleOpacity = 1;
-    document.getElementById("showPath").innerHTML = "Hide Path";
+    document.getElementById("showPath").innerHTML = "Show Path";
   } 
   _toggleShowPath();
 }
