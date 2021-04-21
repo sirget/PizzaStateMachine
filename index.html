@@ -1,180 +1,110 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pizza Computer</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Prompt&display=swap"
-      rel="stylesheet"
-    />
-    <script src="go.js"></script>
-    <script src="myState.js"></script>
-    <script src="myGoJS.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-  </head>
 
-  <body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Pizza Computer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet" />
+  <script src="go.js"></script>
+  <script src="myState.js"></script>
+  <script src="myGoJS.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+</head>
+
+<body>
   </div>
-    <div class="container">
-      <div class="header">
-        <div class="header-text">Pizza Computer</div>
-      </div>
-      <div class="dfa">
-        <div class="dfa-content">
-          <div id="myDiagramDiv"></div>
-        </div>
-      </div>
-
-      <div class="input">
-        <h3 style="display: flex; justify-content: space-between">
-          Input:<button
-            onclick="toggleShowPath()"
-            class="showPath"
-            id="showPath"
-          >
-            Show Path
-          </button>
-        </h3>
-        <div>
-          <p id="inputstring"></p>
-        </div>
-      </div>
-
-      <div class="selector">
-        <div class="selector-head">
-          <h2 id="name">เลือกพิซซ่าที่คุณต้องการ</h2>
-        </div>
-
-        <h3>เลือกขอบ</h3>
-        <div class="choice">
-          <input
-            id="ED_cheese"
-            type="radio"
-            name="crust"
-            class="pic-button"
-            onclick="handleClick('ขอบชีส')"
-          />
-          <label for="ED_cheese">
-            <img class="pic-cropper" src="./pic/ขอบชีส.jpg" alt="ขอบชีส" />
-            <p class="pic-label">ขอบชีส</p>
-          </label>
-          <input
-            id="ED_hotdog"
-            type="radio"
-            name="crust"
-            class="pic-button"
-            onclick="handleClick('ขอบไส้กรอก')"
-          />
-          <label for="ED_hotdog">
-            <img
-              class="pic-cropper"
-              src="./pic/ขอบไส้กรอก.jpg"
-              alt="ขอบไส้กรอก"
-            />
-            <p class="pic-label">ขอบไส้กรอก</p>
-          </label>
-        </div>
-
-        <h3>เลือกหน้า</h3>
-        <div class="choice">
-          <input
-            id="FL_hawaii"
-            type="radio"
-            name="topping"
-            class="pic-button"
-            onclick="handleClick('ฮาวายเอียน')"
-          />
-          <label for="FL_hawaii">
-            <img
-              class="pic-cropper"
-              src="./pic/ฮาวายเอี้ยน.jpg"
-              alt="ฮาวายเอียน"
-            />
-            <p class="pic-label">ฮาวายเอียน</p>
-          </label>
-          <input
-            id="FL_seafood"
-            type="radio"
-            name="topping"
-            class="pic-button"
-            onclick="handleClick('ซีฟู้ด')"
-          />
-          <label for="FL_seafood">
-            <img
-              class="pic-cropper"
-              src="./pic/ซีฟูดค็อกเทล.jpg"
-              alt="ซีฟูดค็อกเทล"
-            />
-            <p class="pic-label">ซีฟูดค็อกเทล</p>
-          </label>
-          <input
-            id="FL_doublecheese"
-            type="radio"
-            name="topping"
-            class="pic-button"
-            onclick="handleClick('ดับเบิ้ลชีส')"
-          />
-          <label for="FL_doublecheese">
-            <img
-              class="pic-cropper"
-              src="./pic/ดับเบิ้ลชีสพิซซ่า.jpg"
-              alt="ดับเบิ้ลชีสพิซซ่า"
-            />
-            <p class="pic-label">ดับเบิ้ลชีสพิซซ่า</p>
-          </label>
-        </div>
-
-        <h3>เพิ่มชีส</h3>
-        <div class="choice">
-          <input
-            id="EX_cheese"
-            type="checkbox"
-            name="add-on"
-            class="pic-button"
-            onclick="handleClick('เพิ่มชีส')"
-          />
-          <label for="EX_cheese">
-            <img
-              class="pic-cropper"
-              src="./pic/ชีส.jpg"
-              alt="MozzarellaCheese"
-            />
-            <p class="pic-label">มอสซาเรลลาชีส</p>
-          </label>
-        </div>
-        <div class="selector-foot">
-          <button id="CM_restart" class="btn btn-reset" onclick="restart()">
-            Reset
-          </button>
-          <button
-            id="CM_confirm"
-            class="btn btn-confirm"
-            onclick="handleClick('Confirm')"
-          >
-            Confirm
-          </button>
-        </div>
+  <div class="container">
+    <div class="header">
+      <div class="header-text">🍕 The Pizza Computer</div>
+    </div>
+    <div class="dfa">
+      <div class="dfa-content">
+        <div id="myDiagramDiv"></div>
       </div>
     </div>
 
-    <div class="header">
-      <a>
-          ❤️61010280 นายณชวนนท์ เพชราภรณ์ ❤️ 61010430 นายธนบดี แสงประจง ❤️61010949
-          นายวรุต เพชรสุวรรณ ❤️61010958 นายวัชรากร แท่นแก้ว ❤️61011166 นายหฤษฎ์ สินกำเนิด
-      </a>
-  </div>
-  </body>
+    <div class="input">
+      <h3 style="display: flex; justify-content: space-between">
+        Input:<button onclick="toggleShowPath()" class="showPath" id="showPath">
+          Show Path
+        </button>
+      </h3>
+      <div>
+        <p id="inputstring"></p>
+      </div>
+    </div>
 
-  <script>
-    console.log("starto");
-    init();
-  </script>
+    <div class="selector">
+      <div class="selector-head">
+        <h2 id="name">เลือกพิซซ่าที่คุณต้องการ🍴</h2>
+      </div>
+
+      <h3>เลือกขอบ</h3>
+      <div class="choice">
+        <input id="ED_cheese" type="radio" name="crust" class="pic-button" onclick="handleClick('ขอบชีส')" />
+        <label for="ED_cheese">
+          <img class="pic-cropper" src="./pic/ขอบชีส.jpg" alt="ขอบชีส" />
+          <p class="pic-label">ขอบชีส</p>
+        </label>
+        <input id="ED_hotdog" type="radio" name="crust" class="pic-button" onclick="handleClick('ขอบไส้กรอก')" />
+        <label for="ED_hotdog">
+          <img class="pic-cropper" src="./pic/ขอบไส้กรอก.jpg" alt="ขอบไส้กรอก" />
+          <p class="pic-label">ขอบไส้กรอก</p>
+        </label>
+      </div>
+
+      <h3>เลือกหน้า</h3>
+      <div class="choice">
+        <input id="FL_hawaii" type="radio" name="topping" class="pic-button" onclick="handleClick('ฮาวายเอียน')" />
+        <label for="FL_hawaii">
+          <img class="pic-cropper" src="./pic/ฮาวายเอี้ยน.jpg" alt="ฮาวายเอียน" />
+          <p class="pic-label">ฮาวายเอียน</p>
+        </label>
+        <input id="FL_seafood" type="radio" name="topping" class="pic-button" onclick="handleClick('ซีฟู้ด')" />
+        <label for="FL_seafood">
+          <img class="pic-cropper" src="./pic/ซีฟูดค็อกเทล.jpg" alt="ซีฟูดค็อกเทล" />
+          <p class="pic-label">ซีฟูดค็อกเทล</p>
+        </label>
+        <input id="FL_doublecheese" type="radio" name="topping" class="pic-button"
+          onclick="handleClick('ดับเบิ้ลชีส')" />
+        <label for="FL_doublecheese">
+          <img class="pic-cropper" src="./pic/ดับเบิ้ลชีสพิซซ่า.jpg" alt="ดับเบิ้ลชีสพิซซ่า" />
+          <p class="pic-label">ดับเบิ้ลชีสพิซซ่า</p>
+        </label>
+      </div>
+
+      <h3>เพิ่มชีส</h3>
+      <div class="choice">
+        <input id="EX_cheese" type="checkbox" name="add-on" class="pic-button" onclick="handleClick('เพิ่มชีส')" />
+        <label for="EX_cheese">
+          <img class="pic-cropper" src="./pic/ชีส.jpg" alt="MozzarellaCheese" />
+          <p class="pic-label">มอสซาเรลลาชีส</p>
+        </label>
+      </div>
+      <div class="selector-foot">
+        <button id="CM_restart" class="btn btn-reset" onclick="restart()">
+          ❌Reset
+        </button>
+        <button id="CM_confirm" class="btn btn-confirm" onclick="handleClick('Confirm')">
+          ✔️Confirm
+        </button>
+      </div>
+    </div>
+    <div class="footer">
+      ❤️61010280 นายณชวนนท์ เพชราภรณ์ ❤️ 61010430 นายธนบดี แสงประจง ❤️61010949 นายวรุต เพชรสุวรรณ ❤️61010958 นายวัชรากร
+      แท่นแก้ว ❤️61011166 นายหฤษฎ์ สินกำเนิด
+    </div>
+  </div>
+</body>
+
+<script>
+  console.log("starto");
+  init();
+</script>
+
 </html>

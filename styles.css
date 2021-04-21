@@ -1,20 +1,22 @@
 :root {
-  --green: #4caf50;
+  --green: #318534;
   --red: #cd071e;
   --light-grey: #e4e4e4;
-  --grey: #363636;
+  --grey: #272727;
   --white: #ffffff;
 }
 
 body {
   font-family: "Roboto", "Prompt", sans-serif;
   margin: 0;
+  background-image: url('./pic/bg.jpg');
+  background-size: cover;
 }
 
 #myDiagramDiv {
   width: 100%;
   height: 100%;
-  background-color: var(--grey);
+  background-color: rgba(27, 27, 27, 0.9);
   border-radius: 16px;
 }
 .showPath {
@@ -58,9 +60,11 @@ body {
   display: flex;
   padding-top: 10px;
 }
+
 .container {
   display: block;
   justify-content: space-around;
+  
 }
 
 .container div {
@@ -68,6 +72,7 @@ body {
 }
 
 .header {
+  /* background-image: url('./pic/wood-bg.jpg'); */
   background-color: var(--green);
   text-align: center;
 }
@@ -75,6 +80,7 @@ body {
   padding: 16px;
   font-size: 36px;
   font-weight: bold;
+  color: white;
 }
 .dfa {
   margin: 20px;
@@ -89,19 +95,27 @@ body {
   height: 200px;
   padding: 10px;
   overflow: auto;
-  background-color: var(--light-grey);
+  background-color: rgba(230, 230, 230, 0.9);
 }
 
 .selector {
-  overflow: auto;
-  background-color: var(--white);
-  padding: 10px;
+  margin: 20px;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 18px;
 }
 
 .choice {
   display: inline-flex;
 }
-/* HIDE RADIO */
+
+.footer{
+  text-align: center;
+  background-color: var(--grey);
+  padding: 10px;
+  color: white;
+}
+
 .pic-button {
   position: absolute;
   opacity: 0;
@@ -110,14 +124,13 @@ body {
 }
 
 .pic-cropper {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   object-fit: cover;
   border-radius: 50%;
-  border: 4px solid var(--light-grey);
+  border: 4px solid transparent;
 }
 
-/* CHECKED STYLES */
 .pic-button:checked + label img {
   border: 4px solid var(--green);
 }
@@ -134,12 +147,13 @@ body {
 @media only screen and (min-width: 900px) {
   .container {
     display: grid;
-    grid-template-columns: 1fr 1fr 420px;
-    grid-template-rows: 80px 600px 1fr;
+    grid-template-columns: 500px 1fr 1fr;
+    grid-template-rows: 80px 600px 1fr 40px;
     grid-template-areas:
       "head head head"
-      "main  main side"
-      "foot  foot side";
+      "side main  main "
+      "side input  input "
+      "foot  foot foot";
     height: 100vh;
     grid-gap: 10px;
   }
@@ -150,17 +164,21 @@ body {
   .dfa {
     grid-area: main;
     margin: 0px;
-    margin-left: 10px;
+    margin-right: 10px;
   }
 
   .input {
-    grid-area: foot;
+    grid-area: input;
     margin: 0px;
-    margin-left: 10px;
+    margin-right: 10px;
   }
 
   .selector {
     grid-area: side;
-    overflow: auto;
+    margin: 0px;
+    margin-left: 10px;
+  }
+  .footer{
+    grid-area: foot;
   }
 }
