@@ -67,7 +67,7 @@ linkDataArray = [
     points: [5, 60, -30, 60, -30, 100, 10, 100, 10, 65],
     segmentIndex: 2,
     segmentFraction: 0.5,
-    text: "ฮาวายเอียน,\nซีฟู้ด,ดับเบิ้ลชีส,\nเพิ่มชีส,\nReset,Confirm",
+    text: "ฮาวายเอียน,\nซีฟู้ด,ดับเบิ้ลชีส,\nเพิ่มชีส,\nConfirm",
   },
   { from: 0, to: 1, text: "ขอบชีส", segmentIndex: 2, segmentFraction: 0.4 },
   { from: 0, to: 2, text: "ขอบไส้กรอก", segmentIndex: 2, segmentFraction: 0.4 },
@@ -586,7 +586,7 @@ linkDataArray = [
     segmentFraction: 0.5,
     segmentIndex: 2,
     text:
-      "ขอบชีส,ขอบไส้กรอก,\nฮาวายเอียน,ซีฟู้ด,\nดับเบิ้ลชีส,เพิ่มชีส,\nReset,confirm",
+      "ขอบชีส,ขอบไส้กรอก,\nฮาวายเอียน,ซีฟู้ด,\nดับเบิ้ลชีส,เพิ่มชีส,\nconfirm",
   },
 
   {
@@ -596,7 +596,7 @@ linkDataArray = [
     segmentIndex: 1,
     segmentFraction: 0.5,
     text:
-      "ขอบชีส,ขอบไส้กรอก,\nฮาวายเอียน,ซีฟู้ด,\nดับเบิ้ลชีส,เพิ่มชีส,\nReset,Confirm",
+      "ขอบชีส,ขอบไส้กรอก,\nฮาวายเอียน,ซีฟู้ด,\nดับเบิ้ลชีส,เพิ่มชีส,\nConfirm",
   },
 
   //Confirm
