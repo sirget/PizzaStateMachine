@@ -297,7 +297,7 @@ linkDataArray = [
     points: [406, -30, 370, -30, 370, -50, 440, -50],
     segmentIndex: 1,
     segmentFraction: 1,
-    text: "ขอบชีส,\nปลาร้า",
+    text: "ขอบชีส,\nเพิ่มชีส",
   },
   {
     from: 5,
@@ -445,7 +445,7 @@ linkDataArray = [
     points: [406, 270, 370, 270, 370, 250, 440, 250],
     segmentIndex: 1,
     segmentFraction: 1,
-    text: "ขอบไส้กรอก,\nปลาร้า",
+    text: "ขอบไส้กรอก,\nเพิ่มชีส",
   },
 
   //layer 3
