@@ -133,6 +133,72 @@ body {
   text-align: center;
 }
 
+.instruction-popup {
+  display: block;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 10%;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+.instruction-content {
+  background-color: #f4f1bc;
+  margin: auto;
+  padding-left: 50px;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  /*padding: 50px;*/
+  /*border: 1px solid #888;*/
+  border: 5px solid #e795fa;
+  width: 50%;
+  color: #0da789;
+  box-shadow: 5px 5px 5px #857d7b;
+  border-radius: 25px;
+  font-size: 22px;
+}
+
+.instruction-content-button {
+  position: relative;
+  left: 80%;
+  bottom: 45%;
+  width: 100px;
+  height: 50px;
+  background-color: #f24726;
+  color: white;
+  border-radius: 50%;
+  margin-left: 25px;
+  font-size: 16px;
+  box-shadow: 0 10px #ce2d12;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.instruction-content-button:hover {
+  box-shadow: 0 15px #ce2d12;
+  transform: translate3D(0, -5px, 0);
+}
+
+.instruction-content-button:active {
+  transform: translate3D(0, 10px, 0);
+  box-shadow: 0 0 #ce2d12;
+}
+
 @media only screen and (min-width: 900px) {
   .container {
     display: grid;
