@@ -678,12 +678,7 @@ linkDataArray = [
 
 var $ = go.GraphObject.make; // for conciseness in defining templates
 
-// How to use
-// call this function with these parameters
-// nodeId : [0,14] id of target node
-// ex. highlightNode(2)
-// *** only 1 node can highlighted ***
-// if want more node to be highlighted, contact previous programmer na ja
+
 function highlightNode(nodeId) {
   var node = myDiagram.findNodeForKey(nodeId++);
   // console.log(node);
@@ -700,14 +695,7 @@ function highlightNode(nodeId) {
   }
 }
 
-// How to use
-// call this function with these parameters
-// from : [-1,14] id of "from" node
-// to : [-1,14] id of "to" node
-// colorPath : value of RGB path's color [value also word ex. "#52ce60",'blue']
-// colorText : value of RGB path's textBlock [value also word ex. "#52ce60",'red']
-// ex. highlightPath(0,1,'blue','red')
-// if want smth more , contact CXZ na ja
+
 function highlightPath(
   from,
   to,
